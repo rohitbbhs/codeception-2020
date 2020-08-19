@@ -1,18 +1,18 @@
 import PersonaliseImageIcon from "./images/personalise-image-icon-2.png"
-import PersonaliseCategoryBooksIcon from "./images/personalise-categories/Books.jpg"
-import PersonaliseCategoryBagsIcon from "./images/personalise-categories/Bags.jpg"
-import PersonaliseCategoryCalendarIcon from "./images/personalise-categories/Calendar.jpg"
-import PersonaliseCategoryCardsIcon from "./images/personalise-categories/Cards.jpg"
-import PersonaliseCategoryChocolatesIcon from "./images/personalise-categories/Chocolates.jpg"
-import PersonaliseCategoryClockIcon from "./images/personalise-categories/Clock.jpg"
+import PersonaliseCategoryBooksIcon from "./images/personalise-categories/Stationery.gif"
+import PersonaliseCategoryBagsIcon from "./images/personalise-categories/Bags.gif"
+import PersonaliseCategoryCalendarIcon from "./images/personalise-categories/Calendar.gif"
+import PersonaliseCategoryCardsIcon from "./images/personalise-categories/Cards.gif"
+import PersonaliseCategoryChocolatesIcon from "./images/personalise-categories/Chocolates.gif"
+import PersonaliseCategoryClockIcon from "./images/personalise-categories/Clock.gif"
 import PersonaliseCategoryFaceShieldIcon from "./images/personalise-categories/FaceShield.jpg"
-import PersonaliseCategoryJewelleryIcon from "./images/personalise-categories/Jewellery.jpg"
-import PersonaliseCategoryKeyChainIcon from "./images/personalise-categories/KeyChain.jpg"
-import PersonaliseCategoryLampsIcon from "./images/personalise-categories/Lamps.jpg"
-import PersonaliseCategoryMaskIcon from "./images/personalise-categories/Mask.jpg"
-import PersonaliseCategoryMugsIcon from "./images/personalise-categories/Mugs.jpg"
-import PersonaliseCategoryPhotoFramesIcon from "./images/personalise-categories/PhotoFrames.jpg"
-import PersonaliseCategoryPostersIcon from "./images/personalise-categories/Posters.jpg"
+import PersonaliseCategoryJewelleryIcon from "./images/personalise-categories/Cushions.gif"
+import PersonaliseCategoryKeyChainIcon from "./images/personalise-categories/KeyChain.gif"
+import PersonaliseCategoryLampsIcon from "./images/personalise-categories/Lamps.gif"
+import PersonaliseCategoryMaskIcon from "./images/personalise-categories/Mask.gif"
+import PersonaliseCategoryMugsIcon from "./images/personalise-categories/Mugs.gif"
+import PersonaliseCategoryPhotoFramesIcon from "./images/personalise-categories/MobileCover.gif"
+import PersonaliseCategoryPostersIcon from "./images/personalise-categories/Posters.gif"
 import PersonaliseCategoryshoesIcon from "./images/personalise-categories/shoes.gif"
 import PersonaliseCategoryTshirtAnimIcon from "./images/personalise-categories/TshirtAnim.gif"
 import TrendingMask1 from "./images/trending-designs/Mask1.jpg"
@@ -144,14 +144,29 @@ export const shopDepartmentTiles = [
 
 export const personaliseCategories = [
     {
-        name: "Bags",
+        name: "Masks",
         redirectTo: "/",
-        image: "bag"
+        image: "mask"
+    },
+     {
+        name: "Shoes",
+        redirectTo: "/personalisedProduct",
+        image: "shoe"
     },
     {
-        name: "Books",
+        name: "T Shirts",
+        redirectTo: "/",
+        image: "tShirt"
+    },
+    {
+        name: "Stationery",
         redirectTo: "/",
         image: "book"
+    },
+    {
+        name: "Mugs",
+        redirectTo: "/",
+        image: "mug"
     },
     {
         name: "Calendar",
@@ -179,7 +194,7 @@ export const personaliseCategories = [
         image: "faceShield"
     },
     {
-        name: "Jewellery",
+        name: "Cushions",
         redirectTo: "/",
         image: "jewellery"
     },
@@ -194,17 +209,12 @@ export const personaliseCategories = [
         image: "lamp"
     },
     {
-        name: "Masks",
+        name: "Bags",
         redirectTo: "/",
-        image: "mask"
+        image: "bag"
     },
     {
-        name: "Mugs",
-        redirectTo: "/",
-        image: "mug"
-    },
-    {
-        name: "Photo Frames",
+        name: "Mobile Cover",
         redirectTo: "/",
         image: "photoFrame"
     },
@@ -213,16 +223,7 @@ export const personaliseCategories = [
         redirectTo: "/",
         image: "poster"
     },
-    {
-        name: "Shoes",
-        redirectTo: "/personalisedProduct",
-        image: "shoe"
-    },
-    {
-        name: "T Shirts",
-        redirectTo: "/",
-        image: "tShirt"
-    },
+   
 ]
 
 export const TrendingImages = [

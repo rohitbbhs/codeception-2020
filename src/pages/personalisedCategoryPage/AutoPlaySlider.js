@@ -8,7 +8,7 @@ import CustomisedBag from "../../images/personalise-categories/Bags.jpg";
 import CustomisedShoes from "../../images/personalise-categories/Shoes.jpg";
 import CustomisedClock from "../../images/personalise-categories/Clock.jpg";
 import CustomisedShoeGif from "../../images/personalise-categories/shoes.gif";
-import CustomisedCalendar from "../../images/personalise-categories/Calendar.jpg";
+import CustomisedCalendar from "../../images/personalise-categories/Mugs.gif";
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
