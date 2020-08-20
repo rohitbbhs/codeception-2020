@@ -1,3 +1,4 @@
+import React from "react"
 import PersonaliseImageIcon from "./images/personalise-image-icon-2.png"
 import PersonaliseCategoryBooksIcon from "./images/personalise-categories/Stationery.gif"
 import PersonaliseCategoryBagsIcon from "./images/personalise-categories/Bags.gif"
@@ -15,6 +16,7 @@ import PersonaliseCategoryPhotoFramesIcon from "./images/personalise-categories/
 import PersonaliseCategoryPostersIcon from "./images/personalise-categories/Posters.gif"
 import PersonaliseCategoryshoesIcon from "./images/personalise-categories/shoes.gif"
 import PersonaliseCategoryTshirtAnimIcon from "./images/personalise-categories/TshirtAnim.gif"
+import LikeIcon from "./images/like-icon.png"
 import TrendingMask1 from "./images/trending-designs/Mask1.jpg"
 import TrendingMask2 from "./images/trending-designs/Mask2.jpg"
 import TrendingMask3 from "./images/trending-designs/Mask3.jpg"
@@ -235,6 +237,30 @@ export const personaliseCategories = [
 
 ]
 
+// const UpVoteOverlay =
+//     (
+//         <div style={{ width: "190px", height: "180px", opacity: "0.5", backgroundColor: "black" }}>
+//             <div style={{ margin: "auto" }}>Yo</div>
+//         </div>)
+
+const captionStyle = {
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    maxHeight: "240px",
+    overflow: "hidden",
+    position: "absolute",
+    bottom: "0",
+    width: "100%",
+    color: "white",
+    padding: "2px",
+    display: "flex",
+    paddingTop: "7px",
+    fontSize: "90%"
+};
+
+const UpVoteOverlay = (<div style={captionStyle}>
+    <img style={{ width: "20px", height: "20px", marginLeft: "10px", padding: "5px" }} src={LikeIcon} />
+</div>)
+
 export const TrendingImages = [
     {
         src: TrendingMask1,
@@ -242,6 +268,7 @@ export const TrendingImages = [
         thumbnailWidth: 600,
         thumbnailHeight: 600,
         isSelected: false,
+        customOverlay: UpVoteOverlay,
         caption: "After Rain (Jeshu John - designerspics.com)"
     },
     {
@@ -249,6 +276,7 @@ export const TrendingImages = [
         thumbnail: TrendingMask2,
         thumbnailWidth: 600,
         thumbnailHeight: 600,
+        customOverlay: UpVoteOverlay,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     },
@@ -257,6 +285,7 @@ export const TrendingImages = [
         thumbnail: TrendingMask3,
         thumbnailWidth: 600,
         thumbnailHeight: 600,
+        customOverlay: UpVoteOverlay,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     },
@@ -265,6 +294,7 @@ export const TrendingImages = [
         thumbnail: TrendingMask4,
         thumbnailWidth: 600,
         thumbnailHeight: 600,
+        customOverlay: UpVoteOverlay,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     }, {
@@ -272,6 +302,7 @@ export const TrendingImages = [
         thumbnail: TrendingShoe1,
         thumbnailWidth: 600,
         thumbnailHeight: 600,
+        customOverlay: UpVoteOverlay,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     },
@@ -280,6 +311,7 @@ export const TrendingImages = [
         thumbnail: TrendingShoe2,
         thumbnailWidth: 600,
         thumbnailHeight: 600,
+        customOverlay: UpVoteOverlay,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     },
@@ -288,6 +320,7 @@ export const TrendingImages = [
         thumbnail: TrendingShoe4,
         thumbnailWidth: 600,
         thumbnailHeight: 600,
+        customOverlay: UpVoteOverlay,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     }, {
@@ -295,6 +328,7 @@ export const TrendingImages = [
         thumbnail: TrendingTshirt1,
         thumbnailWidth: 600,
         thumbnailHeight: 600,
+        customOverlay: UpVoteOverlay,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     }
