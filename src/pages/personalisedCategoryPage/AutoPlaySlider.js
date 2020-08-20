@@ -2,7 +2,7 @@ import React from "react"
 import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
-import CustomisedFaceShield from "../../images/personalise-categories/FaceShield.jpg";
+import Landingpage_photo from "../../images/landingpage_photo.png";
 import CustomisedMask from "../../images/personalise-categories/Mask.jpg";
 import CustomisedBag from "../../images/personalise-categories/Bags.jpg";
 import CustomisedShoes from "../../images/personalise-categories/Shoes.jpg";
@@ -13,20 +13,14 @@ import CustomisedCalendar from "../../images/personalise-categories/Mugs.gif";
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const AutoPlaySliderView = () => {
-    return <div style={{ margin: "auto", height: "50%", width: "100%", backgroundColor: "#000033" }}>
+    return <div style={{ margin: "auto", height: "100%", width: "84%", backgroundColor: "#FFFFFF" }}>
         <AutoplaySlider
-            style={{ margin: "auto", height: "50%", width: "50%" }}
-            play={true}
+            style={{ margin: "auto", width: "100%", height: "400px" }}
+            play={false}
             cancelOnInteraction={true}
             interval={1000}
         >
-            <div data-src={CustomisedFaceShield} />
-            <div data-src={CustomisedMask} />
-            <div data-src={CustomisedShoeGif} />
-            <div data-src={CustomisedBag} />
-            <div data-src={CustomisedCalendar} />
-            <div data-src={CustomisedClock} />
-            <div data-src={CustomisedShoes} />
+            <div data-src={Landingpage_photo} />
         </AutoplaySlider>
     </div>
 }

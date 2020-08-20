@@ -5,7 +5,9 @@ import Designer2 from "../../images/designers/Designer2_Portfolio.png"
 import Designer3 from "../../images/designers/Designer3_Portfolio.png"
 
 const Container = styled.div`
-display:flex
+display:flex;
+width:86%;
+margin:auto;
 `;
 
 const ImageItem = styled.img`
