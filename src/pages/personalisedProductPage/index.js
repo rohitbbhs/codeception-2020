@@ -89,6 +89,7 @@ const PersonalisedProductPage = () => {
     const [showCustomisationModal, setShowCustomisationModal] = useState(false)
     const [selectedImage, setSelectedImage] = useState(CrowdWorkImageList[0])
     const [showShareModal, setShowShareModal] = useState(false)
+    const [hasCustomised, setHasCustomised] = useState(false)
 
     const onTabClick = tab => {
         (tab === YOUR_DESIGN_TAB ? setSelectedImage({ ...YourDesignImageList[0] }) : setSelectedImage({ ...CrowdWorkImageList[0] }))
@@ -115,18 +116,23 @@ const PersonalisedProductPage = () => {
                         </TabContent>
             </Tabs>
             <Divider />
-            {selectedTab === YOUR_DESIGN_TAB ? <YourDesignSection setSelectedShoe={setSelectedImage} /> : <CrowdWorkSection setSelectedShoe={setSelectedImage} />}
-            <StaticImage src={ShoeSizePicker} />
+            {selectedTab === YOUR_DESIGN_TAB ? <YourDesignSection hasCustomised={hasCustomised} setSelectedShoe={setSelectedImage} /> : <CrowdWorkSection setSelectedShoe={setSelectedImage} />}
+            {/* <StaticImage src={ShoeSizePicker} /> */}
             <RoundedButton id={"customise-button"} handleClick={() => setShowCustomisationModal(true)} backgroundColor={"white"} borderColor={"black"} text={"Customise"} textColor={"#000000"} />
             <RoundedButton id={"buy-now-button"} backgroundColor={"#000033"} borderColor={"black"} text={"Buy Now"} textColor={"#FFFFFF"} />
             <StaticImage style={{ marginTop: "30px" }} src={ShippingInfoIcon} />
             <StaticImage style={{ marginTop: "30px", cursor: "pointer" }} onClick={() => setShowShareModal(true)} src={ShareIcon} />
-            <CustomiseModal showCustomisationModal={showCustomisationModal} setShowCustomisationModal={setShowCustomisationModal} />
+            <CustomiseModal showCustomisationModal={showCustomisationModal}
+                setShowCustomisationModal={setShowCustomisationModal}
+                setSelectedImage={setSelectedImage}
+                setSelectedTab={setSelectedTab}
+                setHasCustomised={setHasCustomised}
+            />
         </ProductDetailSection>
-        <Modal show={showShareModal}>
+        <Modal id={"modal"} show={showShareModal}>
             <span style={{ float: "right", fontSize: "20px", padding: "10px", cursor: "pointer" }}
                 onClick={() => setShowShareModal(false)} class="close">&times;</span>
-            <ModalBody onClick={() => setShowShareModal(false)}>
+            <ModalBody id={"modal-body"} onClick={() => setShowShareModal(false)}>
                 <ModalContent >
                     <StaticImage src={ShareModalImage} />
                 </ModalContent>

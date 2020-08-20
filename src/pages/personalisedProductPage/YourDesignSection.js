@@ -13,7 +13,7 @@ border-radius:10px;
   }
   margin-right:10px;`;
 
-const YourDesignSection = ({ setSelectedShoe }) => {
+const YourDesignSection = ({ setSelectedShoe, hasCustomised }) => {
     const [selectedThumbnail, setSelectedThumbnail] = useState(0)
 
     const onThumbnailClick = (index) => {
@@ -21,9 +21,10 @@ const YourDesignSection = ({ setSelectedShoe }) => {
         setSelectedShoe({ ...YourDesignImageList[index] })
     }
     return <>
-        {YourDesignImageList.map((image, index) =>
-            <StaticImage isSelected={index === selectedThumbnail} onClick={() => onThumbnailClick(index)}
-                src={image.thumbnail} />)}
+        <StaticImage isSelected={selectedThumbnail === 0 && !hasCustomised} onClick={() => onThumbnailClick(0)}
+            src={YourDesignImageList[0].thumbnail} />
+        {hasCustomised && <StaticImage isSelected={selectedThumbnail === 1 || hasCustomised} onClick={() => onThumbnailClick(1)}
+            src={YourDesignImageList[1].thumbnail} />}
     </>
 }
 

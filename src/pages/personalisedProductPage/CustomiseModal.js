@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from "@emotion/styled";
 import { CustomisedImages } from "../../Constants"
 import RoundedButton from "../../components/RoundedButton"
+import { YourDesignImageList } from "./images"
 
 const Modal = styled.div`
   display: ${props => props.show ? "block" : "none"}; 
@@ -22,7 +23,7 @@ const ModalContent = styled.div`
   width: 80%; `;
 
 const ModalBody = styled.div`
-  height:600px;
+  height:670px;
   width:100%;
   display:flex;
   margin-top:40px;`;
@@ -55,37 +56,46 @@ border-radius:10px;
 margin-left:10px;
 background-color:${props => props.color}`;
 
-const CustomiseModal = ({ showCustomisationModal, setShowCustomisationModal }) => {
+const CustomiseModal = ({ showCustomisationModal, setShowCustomisationModal, setSelectedImage,
+  setSelectedTab, setHasCustomised }) => {
 
-    const [selectedUpper, setSelectedUpper] = useState("")
-    const [selectedLogo, setSelectedLogo] = useState("")
+  const [selectedUpper, setSelectedUpper] = useState("")
+  const [selectedLogo, setSelectedLogo] = useState("")
 
-    return <Modal show={showCustomisationModal}>
-        <ModalContent>
-            <span style={{ float: "right", fontSize: "20px", padding: "10px", cursor: "pointer" }}
-                onClick={() => setShowCustomisationModal(false)} class="close">&times;</span>
-            <ModalBody >
-                <ImageSection src={CustomisedImages[`${selectedUpper}-${selectedLogo}`]} />
-                <CustomiseSection>
-                    <ModalTitle>Customise your Boots</ModalTitle>
-                    <CustomiseOption>
-                        <StaticImage src={CustomisedImages["option-upper"]} />
-                        <Option color={"#FFD700"} onClick={() => setSelectedUpper("gold-upper")} />
-                        <Option color={"#C0C0C0"} onClick={() => setSelectedUpper("gray-upper")} />
-                    </CustomiseOption>
-                    <CustomiseOption>
-                        <StaticImage src={CustomisedImages["option-logo"]} />
-                        <Option color={"#556B2F"} onClick={() => setSelectedLogo("green-logo")} />
-                        <Option color={"#000000"} onClick={() => setSelectedLogo("black-logo")} />
-                    </CustomiseOption>
-                    <h4 style={{ marginTop: "70px" }}>Not happy with the options ? You can download the project and make your
+  const onSaveClick = () => {
+    setSelectedTab(1)
+    setHasCustomised(true)
+    setSelectedImage({ ...YourDesignImageList[1] })
+    setShowCustomisationModal(false)
+  }
+
+  return <Modal show={showCustomisationModal}>
+    <ModalContent>
+      <span style={{ float: "right", fontSize: "20px", padding: "10px", cursor: "pointer" }}
+        onClick={() => setShowCustomisationModal(false)} class="close">&times;</span>
+      <ModalBody >
+        <ImageSection src={CustomisedImages[`${selectedUpper}-${selectedLogo}`]} />
+        <CustomiseSection>
+          <ModalTitle>Customise your Boots</ModalTitle>
+          <CustomiseOption>
+            <StaticImage src={CustomisedImages["option-upper"]} />
+            <Option color={"#FFD700"} onClick={() => setSelectedUpper("gold-upper")} />
+            <Option color={"#C0C0C0"} onClick={() => setSelectedUpper("gray-upper")} />
+          </CustomiseOption>
+          <CustomiseOption>
+            <StaticImage src={CustomisedImages["option-logo"]} />
+            <Option color={"#556B2F"} onClick={() => setSelectedLogo("green-logo")} />
+            <Option color={"#000000"} onClick={() => setSelectedLogo("black-logo")} />
+          </CustomiseOption>
+          <RoundedButton id={"save-button"} handleClick={() => onSaveClick()} backgroundColor={"black"} borderColor={"black"} text={"Save"} textColor={"#FFFFFF"} />
+          <h4 style={{ marginTop: "70px" }}>Not happy with the options ? You can download the project and make your
                         own customisations which can be emailed to the seller </h4>
 
-                    <RoundedButton id={"customise-button"} handleClick={() => alert("Are you sure you want to download this file?")} backgroundColor={"white"} borderColor={"black"} text={"Download .psd"} textColor={"#000000"} />
-                </CustomiseSection>
-            </ModalBody>
-        </ModalContent>
-    </Modal>
+          <RoundedButton id={"download-button"} handleClick={() => alert("Are you sure you want to download this file?")} backgroundColor={"white"} borderColor={"black"} text={"Download .psd"} textColor={"#000000"} />
+        </CustomiseSection>
+      </ModalBody>
+    </ModalContent>
+  </Modal>
 }
 
 export default CustomiseModal

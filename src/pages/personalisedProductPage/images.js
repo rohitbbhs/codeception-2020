@@ -1,5 +1,9 @@
 import PlainWhiteShoe from '../../images/customise-designs/plain-white.png'
-// import PlainWhiteOliveTipShoe from '../../images/customise-designs/plain-white-olive-tip.png'
+import CustomYellowShoeThumbnail from "../../images/customise-designs/custom-design-yellow-thumbnail.png";
+import CustomYellowShoeImage1 from "../../images/customise-designs/custom-design-yellow-image1.png";
+import CustomYellowShoeImage2 from "../../images/customise-designs/custom-design-yellow-image2.png";
+import CustomYellowShoeImage3 from "../../images/customise-designs/custom-design-yellow-image3.png";
+import CustomYellowShoeImage4 from "../../images/customise-designs/custom-design-yellow-image4.png";
 
 export const CrowdWorkImageList = [
     {
@@ -36,16 +40,13 @@ export const YourDesignImageList = [
         image2: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/6d3ab55b-523c-4f47-a627-42267c03e298/custom-nike-blazer-mid-77-by-you.jpg",
         image3: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/6f5eece0-bbf8-4604-bc31-43f229d07691/custom-nike-blazer-mid-77-by-you.jpg",
         image4: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/3e75943e-f9f0-4cb1-866e-3e2005ef0e6c/custom-nike-blazer-mid-77-by-you.jpg",
-    }
-]
-
-export const CustomiseDesignList = [
-    {
-        name: "plain-white",
-        image: PlainWhiteShoe
     },
-    // {
-    //     name: "plain-white-olive-tip",
-    //     image: PlainWhiteOliveTipShoe
-    // },
+    {
+        name: "Customised Yellow Shoe",
+        thumbnail: CustomYellowShoeThumbnail,
+        image1: CustomYellowShoeImage1,
+        image2: CustomYellowShoeImage2,
+        image3: CustomYellowShoeImage3,
+        image4: CustomYellowShoeImage4,
+    }
 ]
