@@ -14,7 +14,6 @@ const ImageItem = styled.img`
 margin-left:20px;
 width:30%;
 margin:auto;
-margin-top:70px;
 margin-bottom:100px;
 border: 5px solid #000000;
 height:30%;`;

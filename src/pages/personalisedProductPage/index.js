@@ -119,7 +119,7 @@ const PersonalisedProductPage = () => {
             {selectedTab === YOUR_DESIGN_TAB ? <YourDesignSection hasCustomised={hasCustomised} setSelectedShoe={setSelectedImage} /> : <CrowdWorkSection setSelectedShoe={setSelectedImage} />}
             {/* <StaticImage src={ShoeSizePicker} /> */}
             <RoundedButton id={"customise-button"} handleClick={() => setShowCustomisationModal(true)} backgroundColor={"white"} borderColor={"black"} text={"Customise"} textColor={"#000000"} />
-            <RoundedButton id={"buy-now-button"} backgroundColor={"#000033"} borderColor={"black"} text={"Buy Now"} textColor={"#FFFFFF"} />
+            <RoundedButton id={"buy-now-button"} backgroundColor={"#000033"} borderColor={"black"} text={"Buy Now"} textColor={"#FFFFFF"} handleClick={() => setShowCustomisationModal(false)} />
             <StaticImage style={{ marginTop: "30px" }} src={ShippingInfoIcon} />
             <StaticImage style={{ marginTop: "30px", cursor: "pointer" }} onClick={() => setShowShareModal(true)} src={ShareIcon} />
             <CustomiseModal showCustomisationModal={showCustomisationModal}

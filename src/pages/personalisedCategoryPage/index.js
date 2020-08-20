@@ -10,6 +10,7 @@ import Landingpage_photo from "../../images/landingpage_photo.png";
 
 const TrendingDesignsTitleText = styled.img`
 margin-top:50px;
+margin-bottom:50px;
 height:100%;
 width:100%`;
 
