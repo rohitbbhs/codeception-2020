@@ -26,8 +26,19 @@ import { TrendingImages } from "../../Constants"
 //   width: 125px;
 // `;
 
+const divStyle = {
+    height:'188px',
+    width:'100%',
+    backgroundColor: '#000033'
+  };
 const TrendingDesignsList = () => {
-    return <Gallery margin={4} images={TrendingImages} />
+    return ( 
+    <div style={divStyle} >
+     <Gallery  margin={4} images={TrendingImages} /> 
+     </div>
+    );
 }
+
+
 
 export default TrendingDesignsList

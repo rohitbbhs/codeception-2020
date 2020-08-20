@@ -239,110 +239,70 @@ export const TrendingImages = [
     {
         src: TrendingMask1,
         thumbnail: TrendingMask1,
-        thumbnailWidth: 400,
-        thumbnailHeight: 500,
+        thumbnailWidth: 600,
+        thumbnailHeight: 600,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     },
     {
         src: TrendingMask2,
         thumbnail: TrendingMask2,
-        thumbnailWidth: 400,
-        thumbnailHeight: 500,
+        thumbnailWidth: 600,
+        thumbnailHeight: 600,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     },
     {
         src: TrendingMask3,
         thumbnail: TrendingMask3,
-        thumbnailWidth: 400,
-        thumbnailHeight: 500,
+        thumbnailWidth: 600,
+        thumbnailHeight: 600,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     },
     {
         src: TrendingMask4,
         thumbnail: TrendingMask4,
-        thumbnailWidth: 400,
-        thumbnailHeight: 500,
+        thumbnailWidth: 600,
+        thumbnailHeight: 600,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     }, {
         src: TrendingShoe1,
         thumbnail: TrendingShoe1,
-        thumbnailWidth: 400,
-        thumbnailHeight: 500,
+        thumbnailWidth: 600,
+        thumbnailHeight: 600,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     },
     {
         src: TrendingShoe2,
         thumbnail: TrendingShoe2,
-        thumbnailWidth: 400,
-        thumbnailHeight: 500,
-        isSelected: false,
-        caption: "After Rain (Jeshu John - designerspics.com)"
-    },
-    {
-        src: TrendingShoe3,
-        thumbnail: TrendingShoe3,
-        thumbnailWidth: 400,
-        thumbnailHeight: 500,
+        thumbnailWidth: 600,
+        thumbnailHeight: 600,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     },
     {
         src: TrendingShoe4,
         thumbnail: TrendingShoe4,
-        thumbnailWidth: 400,
-        thumbnailHeight: 500,
+        thumbnailWidth: 600,
+        thumbnailHeight: 600,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     }, {
         src: TrendingTshirt1,
         thumbnail: TrendingTshirt1,
-        thumbnailWidth: 400,
-        thumbnailHeight: 500,
+        thumbnailWidth: 600,
+        thumbnailHeight: 600,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     },
     {
         src: TrendingTshirt2,
         thumbnail: TrendingTshirt2,
-        thumbnailWidth: 400,
-        thumbnailHeight: 500,
-        isSelected: false,
-        caption: "After Rain (Jeshu John - designerspics.com)"
-    },
-    {
-        src: TrendingTshirt3,
-        thumbnail: TrendingTshirt3,
-        thumbnailWidth: 400,
-        thumbnailHeight: 500,
-        isSelected: false,
-        caption: "After Rain (Jeshu John - designerspics.com)"
-    },
-    {
-        src: TrendingTshirt4,
-        thumbnail: TrendingTshirt4,
-        thumbnailWidth: 400,
-        thumbnailHeight: 500,
-        isSelected: false,
-        caption: "After Rain (Jeshu John - designerspics.com)"
-    },
-    {
-        src: TrendingTshirt3,
-        thumbnail: TrendingTshirt3,
-        thumbnailWidth: 400,
-        thumbnailHeight: 500,
-        isSelected: false,
-        caption: "After Rain (Jeshu John - designerspics.com)"
-    },
-    {
-        src: TrendingTshirt4,
-        thumbnail: TrendingTshirt4,
-        thumbnailWidth: 400,
-        thumbnailHeight: 500,
+        thumbnailWidth: 600,
+        thumbnailHeight: 600,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     }

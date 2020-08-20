@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import TrendingDesignsTitle from "../../images/Trending Designs.png"
 import TrendingDesignsList from "./TrendingDesignsList"
 import PersonalisationCategories from "./PersonalisationCategories"
+import TrendingDesignersTitle from "../../images/TrendingDesigners.png"
 
 const TrendingDesignsTitleText = styled.img`
 margin-top:50px;
@@ -16,6 +17,7 @@ const PersonalisedCategoryPage = () => {
         <PersonalisationCategories />
         <TrendingDesignsTitleText src={TrendingDesignsTitle} />
         <TrendingDesignsList />
+        <TrendingDesignsTitleText src={TrendingDesignersTitle} />
     </div>
 }
 
