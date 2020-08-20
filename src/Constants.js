@@ -297,14 +297,6 @@ export const TrendingImages = [
         thumbnailHeight: 600,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
-    },
-    {
-        src: TrendingTshirt2,
-        thumbnail: TrendingTshirt2,
-        thumbnailWidth: 600,
-        thumbnailHeight: 600,
-        isSelected: false,
-        caption: "After Rain (Jeshu John - designerspics.com)"
     }
 ]
 export const getImage = {

@@ -28,8 +28,9 @@ import { TrendingImages } from "../../Constants"
 
 const divStyle = {
     height:'188px',
-    width:'100%',
-    backgroundColor: '#000033'
+    width:'84%',
+    backgroundColor: '#000033',
+    margin:"auto"
   };
 const TrendingDesignsList = () => {
     return ( 
