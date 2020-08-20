@@ -27,6 +27,15 @@ import TrendingTshirt1 from "./images/trending-designs/Tshirt1.jpg"
 import TrendingTshirt2 from "./images/trending-designs/Tshirt3.jpg"
 import TrendingTshirt3 from "./images/trending-designs/Tshirt4.jpg"
 import TrendingTshirt4 from "./images/trending-designs/Tshirt5.jpg"
+import CustomiseOptionTip from "./images/customise-designs/option-tip.png"
+import CustomiseOptionUpper from "./images/customise-designs/option-upper.png"
+import CustomiseOptionLogo from "./images/customise-designs/option-logo.png"
+import GoldUpper from "./images/customise-designs/gold-upper.png"
+import GrayUpper from "./images/customise-designs/gray-upper.png"
+import GrayUpperBlackLogo from "./images/customise-designs/gray-upper-black-logo.png"
+import GrayUpperGreenLogo from "./images/customise-designs/gray-upper-green-logo.png"
+import GoldUpperGreenLogo from "./images/customise-designs/gold-upper-green-logo.png"
+import GoldUpperBlackLogo from "./images/customise-designs/gold-upper-black-logo.png"
 
 export const quickLinksList = [
     {
@@ -374,5 +383,14 @@ export const getImage = {
 }
 
 export const CustomisedImages = {
-    plain: "https://render.nikeid.com/is/image/nikeid/?layer=0&src=ir(nikeidrender/Bla77MidWsFA20_v2?obj=/s/shadow/shad&show=&color=000000&obj=/s/g1/mlea&color=f2f3f5&show=&obj=/s/g2/mlea&color=F2F3F5&show=&obj=/s/g3/mlea&color=F2F3F5&show=&obj=/s/g4/mlea&color=F2F3F5&show=&obj=/s/g5/mlea&color=F2F3F5&show=&obj=/s/g6/mlea&color=F2F3F5&show=&obj=/s/g7/mlea&color=F2F3F5&show=&obj=/s/g8&color=f4f5f6&show=&obj=/s/g9/mbkg&color=f1f6ff&show=&obj=/s/g12/mlin&color=eff5ff&show=&obj=/s/g14/mlace&color=f0f4ff&show=&obj=/s/g15/sidem&color=eaebf7&show=&obj=/s/g16/out&color=eaebf7&show=&obj=/s/g19/mid&show=&obj=/s/g22/variam&color=b0b3b8&show=&obj=/s/g11/mswoosh&color=ff6524&show=&obj=/s/g10/mnike&color=212121&show=&obj=/s&req=object&fmt=png-alpha&icc=AdobeRGB)bgc=f5f5f5&fmt=jpeg&qlt=90&posN=0,-0.1&icc=AdobeRGB&wid=864",
+    "-": "https://render.nikeid.com/is/image/nikeid/?layer=0&src=ir(nikeidrender/Bla77MidWsFA20_v2?obj=/s/shadow/shad&show=&color=000000&obj=/s/g1/mlea&color=f2f3f5&show=&obj=/s/g2/mlea&color=F2F3F5&show=&obj=/s/g3/mlea&color=F2F3F5&show=&obj=/s/g4/mlea&color=F2F3F5&show=&obj=/s/g5/mlea&color=F2F3F5&show=&obj=/s/g6/mlea&color=F2F3F5&show=&obj=/s/g7/mlea&color=F2F3F5&show=&obj=/s/g8&color=f4f5f6&show=&obj=/s/g9/mbkg&color=f1f6ff&show=&obj=/s/g12/mlin&color=eff5ff&show=&obj=/s/g14/mlace&color=f0f4ff&show=&obj=/s/g15/sidem&color=eaebf7&show=&obj=/s/g16/out&color=eaebf7&show=&obj=/s/g19/mid&show=&obj=/s/g22/variam&color=b0b3b8&show=&obj=/s/g11/mswoosh&color=ff6524&show=&obj=/s/g10/mnike&color=212121&show=&obj=/s&req=object&fmt=png-alpha&icc=AdobeRGB)bgc=f5f5f5&fmt=jpeg&qlt=90&posN=0,-0.1&icc=AdobeRGB&wid=864",
+    "option-tip": CustomiseOptionTip,
+    "option-upper": CustomiseOptionUpper,
+    "option-logo": CustomiseOptionLogo,
+    "gold-upper-": GoldUpper,
+    "gray-upper-": GrayUpper,
+    "gold-upper-green-logo": GoldUpperGreenLogo,
+    "gold-upper-black-logo": GoldUpperBlackLogo,
+    "gray-upper-black-logo": GrayUpperBlackLogo,
+    "gray-upper-green-logo": GrayUpperGreenLogo,
 }

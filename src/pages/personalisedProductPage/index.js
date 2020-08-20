@@ -2,13 +2,14 @@ import React, { useState } from "react"
 import styled from "@emotion/styled";
 import ProductDetailTitle from "../../images/custom-designer-shoes-title.png"
 import ShareIcon from "../../images/share-product.png"
+import ShareModalImage from "../../images/share-product-modal.png"
 import ShoeSizePicker from "../../images/shoe-size-picker.png"
+import ShippingInfoIcon from "../../images/shipping-info.png"
 import CrowdWorkSection from "./CrowdWorkSection"
 import YourDesignSection from "./YourDesignSection"
 import RoundedButton from "../../components/RoundedButton"
 import CustomiseModal from "./CustomiseModal"
 import { CrowdWorkImageList, YourDesignImageList } from "./images"
-import Gallery from 'react-grid-gallery';
 
 const Container = styled.div`
 display:flex;
@@ -53,24 +54,42 @@ height:10px
 background-color:black;
 `;
 
+const ModalContent = styled.div`
+  background-color: #fefefe;
+  margin: 5% auto; 
+  padding: 20px;
+  cursor:pointer;
+  border: 1px solid #888;
+  width: 300px;
+  height:470px `;
+
+const ModalBody = styled.div`
+  height:600px;
+  width:100%;
+  display:flex;
+  margin-top:40px;`;
+
+const Modal = styled.div`
+  display: ${props => props.show ? "block" : "none"}; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);`;
+
 const INSPIRATION_TAB = 0
 const YOUR_DESIGN_TAB = 1
 
-// const ShareImage = [
-//     {
-//         src: ShareIcon,
-//         thumbnail: ShareIcon,
-//         thumbnailWidth: 832,
-//         thumbnailHeight: 386,
-//         isSelected: false
-//     }]
 const PersonalisedProductPage = () => {
 
     const [selectedTab, setSelectedTab] = useState(INSPIRATION_TAB)
     const [showCustomisationModal, setShowCustomisationModal] = useState(false)
     const [selectedImage, setSelectedImage] = useState(CrowdWorkImageList[0])
+    const [showShareModal, setShowShareModal] = useState(false)
 
-    console.log(showCustomisationModal)
     const onTabClick = tab => {
         (tab === YOUR_DESIGN_TAB ? setSelectedImage({ ...YourDesignImageList[0] }) : setSelectedImage({ ...CrowdWorkImageList[0] }))
         setSelectedTab(tab)
@@ -100,10 +119,19 @@ const PersonalisedProductPage = () => {
             <StaticImage src={ShoeSizePicker} />
             <RoundedButton id={"customise-button"} handleClick={() => setShowCustomisationModal(true)} backgroundColor={"white"} borderColor={"black"} text={"Customise"} textColor={"#000000"} />
             <RoundedButton id={"buy-now-button"} backgroundColor={"#000033"} borderColor={"black"} text={"Buy Now"} textColor={"#FFFFFF"} />
-            <StaticImage style={{ cursor: "pointer" }} src={ShareIcon} />
-            {/* <Gallery margin={4} images={ShareImage} /> */}
+            <StaticImage style={{ marginTop: "30px" }} src={ShippingInfoIcon} />
+            <StaticImage style={{ marginTop: "30px", cursor: "pointer" }} onClick={() => setShowShareModal(true)} src={ShareIcon} />
             <CustomiseModal showCustomisationModal={showCustomisationModal} setShowCustomisationModal={setShowCustomisationModal} />
         </ProductDetailSection>
+        <Modal show={showShareModal}>
+            <span style={{ float: "right", fontSize: "20px", padding: "10px", cursor: "pointer" }}
+                onClick={() => setShowShareModal(false)} class="close">&times;</span>
+            <ModalBody onClick={() => setShowShareModal(false)}>
+                <ModalContent >
+                    <StaticImage src={ShareModalImage} />
+                </ModalContent>
+            </ModalBody>
+        </Modal>
     </Container>
 }
 

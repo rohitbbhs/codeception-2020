@@ -16,6 +16,7 @@ border-color: ${props => props.borderColor};
   margin-left:40px;
   margin-top:20px;
   cursor:pointer;
+  outline:none;
   `;
 const RoundedButton = ({ text, backgroundColor, textColor, borderColor, handleClick }) => {
   return <div><StyledButton backgroundColor={backgroundColor} onClick={() => handleClick()} textColor={textColor} borderColor={borderColor}>{text}</StyledButton></div>
