@@ -81,6 +81,7 @@ const PersonalisedProductPage = () => {
 
     return <Container id={"container"} >
         <ImageSection id={"image-section"} >
+            {<h3 style={{ position: "absolute", left: "9%", top: "8%" }}>Designed By: {selectedImage.name}</h3>}
             <ImageFile src={selectedImage.image1} />
             <ImageFile src={selectedImage.image2} />
             <ImageFile src={selectedImage.image3} />
