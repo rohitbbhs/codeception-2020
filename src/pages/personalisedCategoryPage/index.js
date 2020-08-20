@@ -6,15 +6,22 @@ import TrendingDesignsList from "./TrendingDesignsList"
 import TrendingDesignersList from "./TrendingDesignersList"
 import PersonalisationCategories from "./PersonalisationCategories"
 import TrendingDesignersTitle from "../../images/TrendingDesigners.png"
+import Landingpage_photo from "../../images/landingpage_photo.png";
 
 const TrendingDesignsTitleText = styled.img`
 margin-top:50px;
 height:100%;
 width:100%`;
 
+const StaticImage = styled.img`
+margin-top:-3px;
+height: 100%;
+width: 100%;
+`;
+
 const PersonalisedCategoryPage = () => {
     return <div>
-        <AutoPlaySlider />
+        <StaticImage src={Landingpage_photo} />
         <PersonalisationCategories />
         <TrendingDesignsTitleText src={TrendingDesignsTitle} />
         <TrendingDesignsList />
