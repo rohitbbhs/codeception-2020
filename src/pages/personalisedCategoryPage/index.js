@@ -3,6 +3,7 @@ import AutoPlaySlider from "./AutoPlaySlider"
 import styled from "@emotion/styled";
 import TrendingDesignsTitle from "../../images/Trending Designs.png"
 import TrendingDesignsList from "./TrendingDesignsList"
+import TrendingDesignersList from "./TrendingDesignersList"
 import PersonalisationCategories from "./PersonalisationCategories"
 import TrendingDesignersTitle from "../../images/TrendingDesigners.png"
 
@@ -18,6 +19,7 @@ const PersonalisedCategoryPage = () => {
         <TrendingDesignsTitleText src={TrendingDesignsTitle} />
         <TrendingDesignsList />
         <TrendingDesignsTitleText src={TrendingDesignersTitle} />
+        <TrendingDesignersList />
     </div>
 }
 

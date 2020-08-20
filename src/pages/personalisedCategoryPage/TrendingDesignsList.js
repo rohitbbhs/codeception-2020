@@ -27,15 +27,16 @@ import { TrendingImages } from "../../Constants"
 // `;
 
 const divStyle = {
-    height:'188px',
-    width:'100%',
-    backgroundColor: '#000033'
-  };
+    height: '188px',
+    width: '100%',
+    backgroundColor: '#000033',
+    marginTop: "70px"
+};
 const TrendingDesignsList = () => {
-    return ( 
-    <div style={divStyle} >
-     <Gallery  margin={4} images={TrendingImages} /> 
-     </div>
+    return (
+        <div style={divStyle} >
+            <Gallery margin={4} images={TrendingImages} />
+        </div>
     );
 }
 
