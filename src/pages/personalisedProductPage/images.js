@@ -34,14 +34,6 @@ export const CrowdWorkImageList = [
 
 export const YourDesignImageList = [
     {
-        name: "Brown Shoe",
-        thumbnail: "https://static.nike.com/a/images/t_PDP_144_v1/f_auto/9748e9cf-5196-44db-a49c-249051737e2b/custom-nike-blazer-mid-77-by-you.jpg",
-        image1: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/9748e9cf-5196-44db-a49c-249051737e2b/custom-nike-blazer-mid-77-by-you.jpg",
-        image2: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/6d3ab55b-523c-4f47-a627-42267c03e298/custom-nike-blazer-mid-77-by-you.jpg",
-        image3: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/6f5eece0-bbf8-4604-bc31-43f229d07691/custom-nike-blazer-mid-77-by-you.jpg",
-        image4: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/3e75943e-f9f0-4cb1-866e-3e2005ef0e6c/custom-nike-blazer-mid-77-by-you.jpg",
-    },
-    {
         name: "Customised Yellow Shoe",
         thumbnail: CustomYellowShoeThumbnail,
         image1: CustomYellowShoeImage1,

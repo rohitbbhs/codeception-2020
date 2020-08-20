@@ -3,13 +3,12 @@ import styled from "@emotion/styled";
 import ProductDetailTitle from "../../images/custom-designer-shoes-title.png"
 import ShareIcon from "../../images/share-product.png"
 import ShareModalImage from "../../images/share-product-modal.png"
-import ShoeSizePicker from "../../images/shoe-size-picker.png"
 import ShippingInfoIcon from "../../images/shipping-info.png"
 import CrowdWorkSection from "./CrowdWorkSection"
 import YourDesignSection from "./YourDesignSection"
 import RoundedButton from "../../components/RoundedButton"
 import CustomiseModal from "./CustomiseModal"
-import { CrowdWorkImageList, YourDesignImageList } from "./images"
+import { CrowdWorkImageList } from "./images"
 
 const Container = styled.div`
 display:flex;
@@ -39,15 +38,6 @@ padding-left:10px`;
 const StaticImage = styled.img`
 width:100%;
 height:100%;`;
-
-const Tabs = styled.div`
-display:flex`;
-
-const TabContent = styled.div`
-padding:24px;
-cursor:pointer;
-font-weight:${props => props.isSelect ? 'bold' : 'normal'};
-font-family:"Lucida Console", Monaco, monospace`;
 
 const Divider = styled.hr`
 height:10px
@@ -80,21 +70,14 @@ const Modal = styled.div`
   background-color: rgb(0,0,0); 
   background-color: rgba(0,0,0,0.4);`;
 
-const INSPIRATION_TAB = 0
-const YOUR_DESIGN_TAB = 1
 
 const PersonalisedProductPage = () => {
 
-    const [selectedTab, setSelectedTab] = useState(INSPIRATION_TAB)
+    const [selectedThumbnail, setSelectedThumbnail] = useState(0)
     const [showCustomisationModal, setShowCustomisationModal] = useState(false)
     const [selectedImage, setSelectedImage] = useState(CrowdWorkImageList[0])
     const [showShareModal, setShowShareModal] = useState(false)
     const [hasCustomised, setHasCustomised] = useState(false)
-
-    const onTabClick = tab => {
-        (tab === YOUR_DESIGN_TAB ? setSelectedImage({ ...YourDesignImageList[0] }) : setSelectedImage({ ...CrowdWorkImageList[0] }))
-        setSelectedTab(tab)
-    }
 
     return <Container id={"container"} >
         <ImageSection id={"image-section"} >
@@ -105,7 +88,7 @@ const PersonalisedProductPage = () => {
         </ImageSection>
         <ProductDetailSection id={"product-details"} >
             <StaticImage className={"row"} src={ProductDetailTitle} />
-            <Tabs>
+            {/* <Tabs>
                 <TabContent isSelect={selectedTab === INSPIRATION_TAB}
                     onClick={() => onTabClick(INSPIRATION_TAB)}>
                     Crowd Work
@@ -114,9 +97,15 @@ const PersonalisedProductPage = () => {
                     onClick={() => onTabClick(YOUR_DESIGN_TAB)}>
                     Your Design
                         </TabContent>
-            </Tabs>
+            </Tabs> */}
+            <h3 style={{ padding: "10px" }}>Crowd Work</h3>
             <Divider />
-            {selectedTab === YOUR_DESIGN_TAB ? <YourDesignSection hasCustomised={hasCustomised} setSelectedShoe={setSelectedImage} /> : <CrowdWorkSection setSelectedShoe={setSelectedImage} />}
+            <CrowdWorkSection selectedThumbnail={selectedThumbnail}
+                setSelectedThumbnail={setSelectedThumbnail} setSelectedShoe={setSelectedImage} />
+            <h3 style={{ padding: "10px", marginTop: "20px" }}>Your Design</h3>
+            <Divider />
+            <YourDesignSection selectedThumbnail={selectedThumbnail}
+                setSelectedThumbnail={setSelectedThumbnail} hasCustomised={hasCustomised} setSelectedShoe={setSelectedImage} />
             {/* <StaticImage src={ShoeSizePicker} /> */}
             <RoundedButton id={"customise-button"} handleClick={() => setShowCustomisationModal(true)} backgroundColor={"white"} borderColor={"black"} text={"Customise"} textColor={"#000000"} />
             <RoundedButton id={"buy-now-button"} backgroundColor={"#000033"} borderColor={"black"} text={"Buy Now"} textColor={"#FFFFFF"} handleClick={() => setShowCustomisationModal(false)} />
@@ -125,7 +114,7 @@ const PersonalisedProductPage = () => {
             <CustomiseModal showCustomisationModal={showCustomisationModal}
                 setShowCustomisationModal={setShowCustomisationModal}
                 setSelectedImage={setSelectedImage}
-                setSelectedTab={setSelectedTab}
+                setSelectedThumbnail={setSelectedThumbnail}
                 setHasCustomised={setHasCustomised}
             />
         </ProductDetailSection>

@@ -30,7 +30,7 @@ const divStyle = {
     height: '188px',
     width: '84%',
     backgroundColor: '#000033',
-    marginTop: "70px",
+    marginTop: "50px",
     margin: "auto"
 };
 const TrendingDesignsList = () => {

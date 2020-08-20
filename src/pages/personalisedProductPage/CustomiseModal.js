@@ -57,15 +57,15 @@ margin-left:10px;
 background-color:${props => props.color}`;
 
 const CustomiseModal = ({ showCustomisationModal, setShowCustomisationModal, setSelectedImage,
-  setSelectedTab, setHasCustomised }) => {
+  setSelectedThumbnail, setHasCustomised }) => {
 
   const [selectedUpper, setSelectedUpper] = useState("")
   const [selectedLogo, setSelectedLogo] = useState("")
 
   const onSaveClick = () => {
-    setSelectedTab(1)
+    setSelectedThumbnail(4)
     setHasCustomised(true)
-    setSelectedImage({ ...YourDesignImageList[1] })
+    setSelectedImage({ ...YourDesignImageList[0] })
     setShowCustomisationModal(false)
   }
 
@@ -87,11 +87,12 @@ const CustomiseModal = ({ showCustomisationModal, setShowCustomisationModal, set
             <Option color={"#556B2F"} onClick={() => setSelectedLogo("green-logo")} />
             <Option color={"#000000"} onClick={() => setSelectedLogo("black-logo")} />
           </CustomiseOption>
-          <RoundedButton id={"save-button"} handleClick={() => onSaveClick()} backgroundColor={"black"} borderColor={"black"} text={"Save"} textColor={"#FFFFFF"} />
+          <RoundedButton id={"save-button"} handleClick={() => onSaveClick()} backgroundColor={"black"} borderColor={"black"}
+            text={"Save"} textColor={"#FFFFFF"} />
           <h4 style={{ marginTop: "70px" }}>Not happy with the options ? You can download the project and make your
                         own customisations which can be emailed to the seller </h4>
-
-          <RoundedButton id={"download-button"} handleClick={() => alert("Are you sure you want to download this file?")} backgroundColor={"white"} borderColor={"black"} text={"Download .psd"} textColor={"#000000"} />
+          <RoundedButton id={"download-button"} handleClick={() => alert("Are you sure you want to download this file?")}
+            backgroundColor={"white"} borderColor={"black"} text={"Download .psd"} textColor={"#000000"} />
         </CustomiseSection>
       </ModalBody>
     </ModalContent>

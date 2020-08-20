@@ -13,18 +13,16 @@ border-radius:10px;
   }
   margin-right:10px;`;
 
-const YourDesignSection = ({ setSelectedShoe, hasCustomised }) => {
-    const [selectedThumbnail, setSelectedThumbnail] = useState(0)
+const YourDesignSection = ({ setSelectedShoe, hasCustomised, selectedThumbnail, setSelectedThumbnail }) => {
 
     const onThumbnailClick = (index) => {
-        setSelectedThumbnail(index)
+        setSelectedThumbnail(4)
         setSelectedShoe({ ...YourDesignImageList[index] })
     }
     return <>
-        <StaticImage isSelected={selectedThumbnail === 0 && !hasCustomised} onClick={() => onThumbnailClick(0)}
-            src={YourDesignImageList[0].thumbnail} />
-        {hasCustomised && <StaticImage isSelected={selectedThumbnail === 1 || hasCustomised} onClick={() => onThumbnailClick(1)}
-            src={YourDesignImageList[1].thumbnail} />}
+        {!hasCustomised && <h3>You do not have any designs yet, you may start customising by clicking on the button below.</h3>}
+        {hasCustomised && <StaticImage isSelected={selectedThumbnail === 4} onClick={() => onThumbnailClick(0)}
+            src={YourDesignImageList[0].thumbnail} />}
     </>
 }
 

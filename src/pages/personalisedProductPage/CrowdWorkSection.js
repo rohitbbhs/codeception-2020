@@ -13,8 +13,7 @@ border-radius:10px;
   }
   margin-right:10px;`;
 
-const CrowdWorkSection = ({ setSelectedShoe }) => {
-    const [selectedThumbnail, setSelectedThumbnail] = useState(0)
+const CrowdWorkSection = ({ setSelectedShoe, selectedThumbnail, setSelectedThumbnail }) => {
 
     const onThumbnailClick = (index) => {
         setSelectedThumbnail(index)
