@@ -270,7 +270,7 @@ export const TrendingImages = [
         thumbnailWidth: 600,
         thumbnailHeight: 600,
         isSelected: false,
-        customOverlay: <UpVoteOverlay like={"102"} />,
+        thumbnailCaption: <UpVoteOverlay like={"102"} />,
         caption: "After Rain (Jeshu John - designerspics.com)"
     },
     {
@@ -278,7 +278,7 @@ export const TrendingImages = [
         thumbnail: TrendingMask2,
         thumbnailWidth: 600,
         thumbnailHeight: 600,
-        customOverlay: <UpVoteOverlay like={"109"} />,
+        thumbnailCaption: <UpVoteOverlay like={"109"} />,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     },
@@ -287,7 +287,7 @@ export const TrendingImages = [
         thumbnail: TrendingMask3,
         thumbnailWidth: 600,
         thumbnailHeight: 600,
-        customOverlay: <UpVoteOverlay like={"120"} />,
+        thumbnailCaption: <UpVoteOverlay like={"120"} />,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     },
@@ -296,7 +296,7 @@ export const TrendingImages = [
         thumbnail: TrendingMask4,
         thumbnailWidth: 600,
         thumbnailHeight: 600,
-        customOverlay: <UpVoteOverlay like={"44"} />,
+        thumbnailCaption: <UpVoteOverlay like={"44"} />,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     }, {
@@ -304,7 +304,7 @@ export const TrendingImages = [
         thumbnail: TrendingShoe1,
         thumbnailWidth: 600,
         thumbnailHeight: 600,
-        customOverlay: <UpVoteOverlay like={"87"} />,
+        thumbnailCaption: <UpVoteOverlay like={"87"} />,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     },
@@ -313,7 +313,7 @@ export const TrendingImages = [
         thumbnail: TrendingShoe2,
         thumbnailWidth: 600,
         thumbnailHeight: 600,
-        customOverlay: <UpVoteOverlay like={"42"} />,
+        thumbnailCaption: <UpVoteOverlay like={"42"} />,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     },
@@ -322,7 +322,7 @@ export const TrendingImages = [
         thumbnail: TrendingShoe4,
         thumbnailWidth: 600,
         thumbnailHeight: 600,
-        customOverlay: <UpVoteOverlay like={"102"} />,
+        thumbnailCaption: <UpVoteOverlay like={"102"} />,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     }, {
@@ -330,7 +330,7 @@ export const TrendingImages = [
         thumbnail: TrendingTshirt1,
         thumbnailWidth: 600,
         thumbnailHeight: 600,
-        customOverlay: <UpVoteOverlay like={"44"} />,
+        thumbnailCaption: <UpVoteOverlay like={"44"} />,
         isSelected: false,
         caption: "After Rain (Jeshu John - designerspics.com)"
     }
